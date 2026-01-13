@@ -1,0 +1,23 @@
+import sys
+
+def solve():
+    
+    line1 = sys.stdin.readline()
+    if not line1: return
+    t = int(line1.strip())
+    
+    for _ in range(t):
+        n = int(sys.stdin.readline().strip())
+        arr = list(map(int, sys.stdin.readline().split()))
+        
+        freq = {}
+        for x in arr:
+            freq[x] = freq.get(x, 0) + 1
+            
+        
+        arr.sort(key=lambda x: (-freq[x], x))
+        
+        print(*(arr))
+
+if __name__ == "__main__":
+    solve()
