@@ -1,0 +1,9 @@
+class Solution:
+    def check_elements(self, arr, n, A, B):
+        s = set(arr)
+
+        for x in range(A, B + 1):
+            if x not in s:
+                return False
+
+        return True
