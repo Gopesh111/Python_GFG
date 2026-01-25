@@ -1,0 +1,20 @@
+#slicing
+s = input()
+if s == s[::-1]:
+    print("yes")
+else:
+    print("no")
+
+# two pointers
+s = input()
+l, r = 0, len(s) - 1
+flag = True
+
+while l < r:
+    if s[l] != s[r]:
+        flag = False
+        break
+    l += 1
+    r -= 1
+
+print("yes" if flag else "no")
