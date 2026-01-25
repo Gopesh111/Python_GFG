@@ -1,0 +1,23 @@
+# without set
+a = list(map(int, input().split()))
+b = []
+
+for e in a:
+    if e not in b:
+        b.append(e)
+print(b)
+
+
+
+
+#with set(optimal)
+a = list(map(int, input().split()))
+seen = set()
+result = []
+
+for e in a:
+    if e not in seen:
+        seen.add(e)
+        result.append(e)
+
+print(result)
