@@ -1,0 +1,15 @@
+# using loop
+a = list(map(int, input().split()))
+if len(a) == 0:
+    print("No elements")
+else:
+    m1 = a[0]
+    for e in a:
+        if e > m1:
+            m1 = e
+    print(m1)
+
+
+# using max inbuilt function
+a = list(map(int, input().split()))
+print(max(a))
