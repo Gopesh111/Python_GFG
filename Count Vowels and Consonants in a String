@@ -1,0 +1,29 @@
+# With isalpha()
+s = input().lower()
+vowel = 0
+consonant = 0
+
+for c in s:
+    if c.isalpha():
+        if c in 'aeiou':
+            vowel += 1
+        else:
+            consonant += 1
+
+print(f"vowels={vowel}, consonants={consonant}")
+
+
+# Without isalpha()
+s = input().lower()
+vowel = 0
+consonant = 0
+
+for c in s:
+    if 'a' <= c <= 'z':        
+        if c in 'aeiou':
+            vowel += 1
+        else:
+            consonant += 1
+
+print(f"vowels={vowel}, consonants={consonant}")
+
