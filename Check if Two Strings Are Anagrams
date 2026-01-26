@@ -1,0 +1,21 @@
+a = input().lower()
+b = input().lower()
+
+if len(a) != len(b):
+    print(False)
+else:
+    freq = {}
+
+    for ch in a:
+        freq[ch] = freq.get(ch, 0) + 1
+
+    for ch in b:
+        if ch not in freq:
+            print(False)
+            break
+        freq[ch] -= 1
+        if freq[ch] < 0:
+            print(False)
+            break
+    else:
+        print(True)
