@@ -1,0 +1,13 @@
+a = input()
+ad = {}
+
+for e in a:
+    if e in ad:
+        ad[e] += 1
+    else:
+        ad[e] = 1
+
+for e in a:
+    if ad[e] == 1:
+        print(e)
+        break
