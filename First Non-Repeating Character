@@ -1,13 +1,15 @@
 a = input()
-ad = {}
+freq = {}
+found = False
 
-for e in a:
-    if e in ad:
-        ad[e] += 1
-    else:
-        ad[e] = 1
+for ch in a:
+    freq[ch] = freq.get(ch, 0) + 1
 
-for e in a:
-    if ad[e] == 1:
-        print(e)
+for ch in a:
+    if freq[ch] == 1:
+        print(ch)
+        found = True
         break
+
+if not found:
+    print("No non-repeating character")
