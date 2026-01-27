@@ -1,0 +1,19 @@
+strs = input().split()
+
+if not strs:
+    print("")
+else:
+    first = strs[0]
+
+    for i in range(len(first)):
+        ch = first[i]
+
+        for word in strs:
+            if i == len(word) or word[i] != ch:
+                print(first[:i])
+                break
+        else:
+            continue
+        break
+    else:
+        print(first)
