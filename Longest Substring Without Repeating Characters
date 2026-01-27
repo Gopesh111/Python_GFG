@@ -1,0 +1,16 @@
+s=input()
+if s=="":
+    print("0")
+maxlen=float("-inf")
+t=set()
+left=0
+
+for right in range(len(s)):
+    while s[right] in t:
+        t.remove(s[right])
+        left+=1 
+    t.add(s[right])
+    maxlen=max(maxlen,right-left+1)
+print(maxlen)
+        
+    
