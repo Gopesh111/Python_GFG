@@ -1,0 +1,11 @@
+class Solution:
+    def subarraySum(self, nums: List[int], k: int) -> int:
+        psum=count=0
+        d={0:1}
+        for i in nums:
+            psum+=i
+            remove=psum-k
+            if remove in d:
+                count+=d[remove]
+            d[psum]=d.get(psum,0)+1
+        return count
