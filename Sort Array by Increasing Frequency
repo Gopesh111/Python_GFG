@@ -1,0 +1,7 @@
+class Solution:
+    def frequencySort(self, nums: List[int]) -> List[int]:
+        d = {}
+        for x in nums:
+            d[x] = d.get(x, 0) + 1
+        nums.sort(key=lambda x: (d[x], -x))
+        return nums
