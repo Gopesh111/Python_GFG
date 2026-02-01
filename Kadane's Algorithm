@@ -1,0 +1,10 @@
+class Solution:
+    def maxSubarraySum(self, arr):
+        # Code here
+        csum=arr[0]
+        msum=arr[0]
+        for i in range(1,len(arr)):
+            num=arr[i]
+            csum=max(num,csum+num)
+            msum=max(csum,msum)
+        return msum
