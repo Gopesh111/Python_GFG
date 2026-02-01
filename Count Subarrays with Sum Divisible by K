@@ -1,0 +1,17 @@
+class Solution:
+    # Function to count the number of subarrays with a sum that is divisible by K
+    def subCount(self, arr, k):
+        # Your code goes here
+        c_sum=count=0
+        d={0:1}
+        for i in range(len(arr)):
+            c_sum+=arr[i]
+            rem=c_sum%k
+            if(rem<0):
+                rem=rem+k
+            if rem in d:
+                count+=d[rem]
+                d[rem]+=1
+            else:
+                d[rem]=1
+        return count
