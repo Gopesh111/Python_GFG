@@ -1,0 +1,20 @@
+class Solution:
+    def longestKSubstr(self, s, k):
+        # code here
+        maxlen=-1
+        d={}
+        left=0
+        for right in range(len(s)):
+            char=s[right]
+            d[char]=d.get(char,0)+1
+            while len(d)>k:
+                left_char=s[left]
+                d[left_char]-=1
+                if(d[left_char]==0):
+                    del d[left_char]
+                left+=1
+            if len(d)==k:
+                maxlen=max(maxlen,right-left+1)
+        return maxlen
+        
+        
