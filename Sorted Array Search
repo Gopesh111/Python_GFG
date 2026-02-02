@@ -1,0 +1,17 @@
+#User function Template for python3
+
+class Solution:
+    ##Complete this function
+    def searchInSorted(self,arr, k):
+        #Your code here
+        l,h=0,len(arr)-1
+        while(l<=h):
+            mid=(l+h)//2
+            if(arr[mid]==k):
+                return True
+            elif arr[mid]>k:
+                h=mid-1
+            else:
+                l=mid+1
+        return False
+            
