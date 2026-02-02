@@ -1,0 +1,17 @@
+for start in range(n):
+    ans = 0
+    total = 0
+    for i in range(n):
+        idx = (start + i) % n
+        ans ^= arr[idx]
+        total += ans
+    max_val = max(max_val, total)
+
+    ans = 0
+    total = 0
+    for i in range(n):
+        idx = (start - i) % n
+        ans ^= arr[idx]
+        total += ans
+    max_val = max(max_val, total)
+return max_val
